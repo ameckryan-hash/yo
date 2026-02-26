@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Trisha, Will You Travel With Me? 💖</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #333;
+    }
+    .card {
+      background: white;
+      padding: 40px;
+      border-radius: 20px;
+      max-width: 440px;
+      text-align: center;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+      animation: fadeIn 1.5s ease;
+    }
+    h1 {
+      color: #ff5e7e;
+      margin-bottom: 10px;
+    }
+    p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+    }
+    button {
+      margin: 15px 10px 0;
+      padding: 12px 25px;
+      border: none;
+      border-radius: 30px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    .yes {
+      background: #ff5e7e;
+      color: white;
+    }
+    .yes:hover {
+      background: #ff2e63;
+      transform: scale(1.05);
+    }
+    .no {
+      background: #eee;
+    }
+    .no:hover {
+      background: #ddd;
+    }
+    .hidden {
+      display: none;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <div class="card" id="card">
+    <h1>Hey Trisha 💕</h1>
+    <p>
+      I’ve been thinking about us…
+      <br />
+      and how nice it would be to slow down for a while.
+    </p>
+    <p>
+      No rush. No pressure.
+      <br />
+      Just you and me, somewhere peaceful,
+      making memories and laughing like we always do.
+    </p>
+    <h2>Would you go on a trip with me? ✈️🌄</h2>
+    <button class="yes" onclick="sayYes()">YES 😍</button>
+    <button class="no" onclick="sayNo()">Let me think 🤍</button>
+  </div>
+
+  <div class="card hidden" id="yesCard">
+    <h1>You said YES 🥹❤️</h1>
+    <p>
+      That means more to me than you know.
+      <br />
+      I promise care, respect, and lots of smiles.
+    </p>
+
+
+  </div>
+
+  <div class="card hidden" id="noCard">
+    <h1>That’s completely okay 💛</h1>
+    <p>
+      Take all the time you need.
+      <br />
+      I’m not going anywhere.
+    </p>
+  </div>
+
+  <script>
+    function sayYes() {
+      document.getElementById('card').classList.add('hidden');
+      document.getElementById('yesCard').classList.remove('hidden');
+    }
+    function sayNo() {
+      document.getElementById('card').classList.add('hidden');
+      document.getElementById('noCard').classList.remove('hidden');
+    }
+  </script>
+</body>
+</html>
